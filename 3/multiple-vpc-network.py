@@ -17,9 +17,8 @@
 
 COMPUTE_URL_BASE = 'https://www.googleapis.com/compute/v1/'
 
-
 def GlobalComputeUrl(project, collection, name):
-  return ''.join([COMPUTE_URL_BASE, 'projects/', project, '/global/', collection, '/', name])
+    return ''.join([COMPUTE_URL_BASE, 'projects/', project, '/global/', collection, '/', name])
 
 def GenerateConfig(context):
     """Generate configuration."""
