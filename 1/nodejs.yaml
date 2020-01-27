@@ -17,12 +17,12 @@
 # together using references, and passes them as env variables to the underlying
 # frontend Docker containers.
 imports:
-- path: nodejs.jinja
-- path: stackdriver_alertingpolicies.jinja
+- path: nodejs.py
+#- path: stackdriver_alertingpolicies.jinja
 
 resources:
 - name: nodejs
-  type: nodejs.jinja
+  type: nodejs.py
   properties:
     zone: us-east1-d
 - name: create_alertingpolicies
@@ -32,16 +32,16 @@ resources:
     - emailAddress: "hi@hi.com"
       displayName: "Mr Teal" 
  
-    policies:
-    - name: "Test"   
-      conditions: 
-      - filter: "metric.type=\"compute.googleapis.com/instance/cpu/utilization\" resource.type=\"gce_instance\"" 
-        comparison: "COMPARISON_GT"
-        duration: "60s" 
-        thresholdValue: 20 
-        trigger:
-          count: 1
-        displayName: "Test"
+#     policies:
+#     - name: "Test"   
+#       conditions: 
+#       - filter: "metric.type=\"compute.googleapis.com/instance/cpu/utilization\" resource.type=\"gce_instance\"" 
+#         comparison: "COMPARISON_GT"
+#         duration: "60s" 
+#         thresholdValue: 20 
+#         trigger:
+#           count: 1
+#         displayName: "Test"
 
 
 
