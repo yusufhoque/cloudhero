@@ -29,8 +29,8 @@ resources:
   type: stackdriver_alertingpolicies.jinja
   properties:
     notificationEmails:
-    - emailAddress: "yusufhoque@gmail.com"
-      displayName: "Yusuf Hoque" 
+    - emailAddress: "hi@hi.com"
+      displayName: "Mr Teal" 
  
     policies:
     - name: "Test"   
